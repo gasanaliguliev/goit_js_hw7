@@ -30,7 +30,7 @@ function onCreateGalleryItem(galleryItems) {
         captionDelay: 250
       }
     );
-  lightbox.open();  
+
 
 
 
