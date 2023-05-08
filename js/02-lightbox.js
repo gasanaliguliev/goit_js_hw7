@@ -5,7 +5,7 @@ const galleryListEl = document.querySelector('.gallery');
 const imgCardsMarkup = onCreateGalleryItem(galleryItems);
 galleryListEl.insertAdjacentHTML('beforeend', imgCardsMarkup);
 
-galleryListEl.addEventListener('click', onGalleryListClick);
+galleryListEl.addEventListener('click', onCreateGalleryItem);
 
 
 function onCreateGalleryItem(galleryItems) {
@@ -20,11 +20,6 @@ function onCreateGalleryItem(galleryItems) {
   }).join('');
 };
 
-function onGalleryListClick(event) {
-  event.preventDefault();
-  if (!event.target.classList.contains('gallery__image')) {
-    return;
-  }
 
   var lightbox =
     new SimpleLightbox(
@@ -36,5 +31,6 @@ function onGalleryListClick(event) {
       }
     );
   lightbox.open();  
-}
+
+
 

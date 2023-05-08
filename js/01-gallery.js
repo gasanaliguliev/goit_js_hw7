@@ -33,11 +33,5 @@ function onGalleryContainerClick(event) {
 
   const instance = basicLightbox.create(`
     <img src="${event.target.dataset.source}" width="800" height="600">`);
-  instance.show();  
-
-  galleryImgList.addEventListener('keydown', (event) => {
-    if (event.code === "Escape") {
-      instance.close();
-    }
-  });
-  };
+  instance.show(); 
+};
